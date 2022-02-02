@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.noMeta.noSQLmetamodel/src-gen" creationIcons="false"
+    editDirectory="/org.noMeta.noSQLmetamodel.edit/src-gen" editorDirectory="/org.noMeta.noSQLmetamodel.editor/src-gen"
+    modelPluginID="org.noMeta.noSQLmetamodel" modelName="NoSQLmetamodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>noSQLmetamodel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="NoSQLmetamodel" basePackage="org.nometa" disposableProviderFactory="true"
+      ecorePackage="noSQLmetamodel.ecore#/">
+    <genDataTypes ecoreDataType="noSQLmetamodel.ecore#//IdObject"/>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//ComplexType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//ComplexType/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Attribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Attribute/isKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Attribute/attrName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Attribute/attrType"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Entity/enName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Entity/hasAttribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Entity/hasKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Entity/enType"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//NoMeta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//NoMeta/noName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//NoMeta/hasEntity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//NoMeta/hasRelationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//NoMeta/dbType"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Relationship/relName"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Key">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Key/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Key/isAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Reference/optional_lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Reference/optional_upperBound"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Reference/bidirectional"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Reference/refersTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Reference/optional_count"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Reference/refName"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Embedded">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Embedded/embedds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Embedded/emName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Embedded/count"/>
+    </genClasses>
+    <genClasses ecoreClass="noSQLmetamodel.ecore#//Edge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Edge/edName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Edge/edgeAttribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Edge/sourceEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference noSQLmetamodel.ecore#//Edge/TargetEntity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute noSQLmetamodel.ecore#//Edge/edType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
